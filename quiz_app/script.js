@@ -1,13 +1,18 @@
 const quizData = [
     {
-        question:"Who is the Prime minister of India?",
+        question:"Who is the Prime minister of India ?",
         options:["Narendra Modi","Obama","Elon Musk","Amitabh Bachhan"],
         answer:"Narendra Modi"
     },
     {
-        question:"Who is the Best Choice to hire for Fullstack job?",
+        question:"Who is the Best Choice to hire for Fullstack job ?",
         options:["Candidate with most Experience","Topper Candidate","Candidate with most Knowledge","Rushiraj"],
         answer:"Rushiraj" 
+    },
+    {
+        question:"How many do you think you got right ?",
+        options:["2","1","0","I am GOAT, Everything I say becomes Truth"],
+        answer:"0" 
     }
 ];
 
