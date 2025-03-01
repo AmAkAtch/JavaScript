@@ -40,9 +40,7 @@ function loadQuestion(){
             }else{
                 currentQuestionIndex++;
             }
-            console.log(currentQuestionIndex);
-            console.log(score);
-            console.log(quizData.length)
+        
             if(currentQuestionIndex<quizData.length){
                 loadQuestion();
             }else{
