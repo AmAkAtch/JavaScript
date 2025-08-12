@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.1" />
+    <title>Rushiraj - Contanct</title>
+    <meta
+      name="description"
+      content="webpage to contact Rushiraj for web Development assistance"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Rushiraj Gadhavi</h1>
+      <p>Contact me with more details...</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <h2>Contact me!</h2>
+        <form action="#" method="post">
+          <div>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div>
+            <label for="company">Company/Organization</label>
+            <input type="text" id="company" name="company" />
+          </div>
+
+          <div>
+            <label for="project-type">Project Type</label>
+            <select id="project-type" name="project-type">
+              <option value="">Select one...</option>
+              <option value="website">New website</option>
+              <option value="redesign">Website redesign</option>
+              <option value="maintenance">Maintenance</option>
+              <option value="consultation">Consultation</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="budget">Select your budget</label>
+            <select id="budget" name="budget">
+              <option value="">Select one...</option>
+              <option value="5k">upto 5k</option>
+              <option value="5k-10k">5000 - 10000</option>
+              <option value="10k-20k">10000 - 20000</option>
+              <option value="20k">More than 20k</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="timelimit">Timeconstraint</label>
+            <select id="timelimit" name="timelimit">
+              <option value="">Select one...</option>
+              <option value="1">Under 1Month</option>
+              <option value="1-2">in 1 to 2Months</option>
+              <option value="2-3">in 2 to 3Months</option>
+              <option value="4">More than 3Months</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="project-details">Project Details</label>
+            <textarea
+              id="project-details"
+              name="project-details"
+              rows="5"
+              required
+              placeholder="Tell me about your project and requirements"
+            ></textarea>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="newsletter"
+              name="newsletter"
+              value="yes"
+            />
+            <label for="newsletter"
+              >Yes, I would like to recive occasional updates about
+              WebDevelopment projects and tips</label
+            >
+          </div>
+
+          <div>
+            <button type="submit">Send Message</button>
+            <button type="reset">Clear Form</button>
+          </div>
+        </form>
+      </article>
+    </main>
+  </body>
+</html>
