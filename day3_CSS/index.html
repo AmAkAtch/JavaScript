@@ -2,39 +2,78 @@
 <!--Always add the lang in html to tell narrators and search engines that my page is in English, helps users with disabilities-->
 <html lang="en">
   <head>
+    <!-- Essential meta tags -->
     <!-- UTF-8 handles all characters from all languages, future proofing -->
     <meta charset="UTF-8" />
     <!-- Mobile first thinking to make my content visible on mobile as well -->
-    <meta name="viewport" content="width= device-width, initial-scale=0.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO meta tags -->
     <title>Rushiraj - Software engineer</title>
     <!-- Meta name and content helps Search enginer to know about your website, helps SEO -->
     <meta
       name="description"
-      content="Website to showcase Rushiraj Gadhavi's projects and skills in HTML, CSS, javaScript and React"
+      content="Website to showcase Rushiraj Gadhavi's projects and skills in HTML, CSS, JavaScript and React"
     />
+    <meta
+      name="keywords"
+      content="software engineer, web Development, portfolio, html, css, js, JavaScript, Rushiraj Gadhavi"
+    />
+    <meta name="author" content="Rushiraj Gadhavi" />
+
+    <!-- Open graph meta tags for Social media Sharing -->
+    <meta property="og:title" content="Rushiraj Gadhavi - Software Engineer" />
+    <meta
+      property="og:description"
+      content="Personal website to see previous workds in Web developement and make contact"
+    />
+    <meta property="og:image" content="images/Designer (2).png" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter card Meta tags-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rushiraj Gadhavi - Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="Professional at WebDevelopment, See previous projects and Connect to take your new or existing projects to next level"
+    />
+    <meta name="twitter:image" content="images/Designer (2).png" />
+
+    <!-- favicon -->
+    <link rel="icon" href="images/Designer (2).png" type="image/png" />
+
+    <!-- stylsheet -->
+    <link rel="stylesheet" href="css/index.css" />
   </head>
+
   <body>
+    <!-- this allows keyboard user to bypass navigation and skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to Main content</a>
     <!-- Content will go here -->
     <!-- Add comments to help future me! -->
     <!-- header tells screen readers that this is the header of the page, help optimize SEO -->
     <!-- Using semantic HTML for their meaning not appearance -->
-    <header>
+    <!-- use role to tell scrreen readers that this element's expacted behavior is this... -->
+    <header role="banner">
       <h1>Rushiraj Gadhavi</h1>
       <p>Fullstack Software Engineer</p>
       <!-- if a webpage is larger navigation is a must thing -->
-      <nav>
+      <nav role="navigation" aria-label="Primary navigation">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <main>
+    <main id="main-content">
       <!-- main wraps all the primary content of page - semantic tag-->
       <!-- Section another sematic tag used to separate the individual sections of the page -->
-      <section>
-        <h2>About me</h2>
+      <!-- section is labelled by the first header tag like h1, h2 inside it so there is no need to explicitly mention it -->
+      <section aria-labelledby="about-me">
+        <h2 id="about-me">About me</h2>
         <p>
           I am a Software Engineer with Problem solving Mindset, Experienced in
           HTML, CSS, JavaScript, React, NodeJs, ExpressJs, Java, Python - AI/ML
@@ -42,9 +81,10 @@
         <p>I am also certified professional from AWS Clouse practitioner</p>
         <p>I do Coding to Solve Problems and I love it!</p>
       </section>
-      <section>
-        <h2>Skills</h2>
-        <ul>
+
+      <section aria-labelledby="technical-skills">
+        <h2 id="technical-skills">Skills</h2>
+        <ul role="list">
           <li>HTML & Semantic Markup</li>
           <li>CSS3 & Responsive Design</li>
           <li>JavaScript & Dom Manipulation</li>
@@ -53,8 +93,9 @@
           <li>Python & Model Training</li>
         </ul>
       </section>
-      <section>
-        <h2>Contact me</h2>
+
+      <section aria-labelledby="contact-links">
+        <h2 id="contact-links">Contact me</h2>
         <ul>
           <!-- href="mailto:" creates a link that will open user's mail system -->
           <!-- href="tel:" is used for mobile devices that will open phone to call -->
@@ -78,8 +119,12 @@
         </ul>
       </section>
     </main>
+
     <footer>
-      <p>&copy; 2024 Rushiraj Gadhavi, all rights reserved</p>
+      <p>
+        &copy; <span id="current-year">2024</span> Rushiraj Gadhavi, all rights
+        reserved
+      </p>
     </footer>
   </body>
 </html>

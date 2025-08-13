@@ -6,3 +6,14 @@
 3. decide the technology and start coding
 4. First will be skeleton, than functionality and appearance
 5. Before adding the content think - what sections do I need ?
+6. Code structure should be better, so that any new developer can understand the structure of the application
+7. Every professional HTML page should have a complete Head section with the necessary meta tags
+   i. Essential Meta tags
+   ii. SEO Meta tags
+   iii. Open graph meta tags for Social media Sharing
+   iv. Twitter card Meta tags
+   v. Fevicon
+   vi. Stylesheet
+8. Accessibility isn't just for compliance, it's for making web accessible for everyone.
+9. Should use role="" whenver you are using div or not sematic elements (not part of header, footer, main, button etc..), every sematic element have role inbuilt to them
+10. whenver Making a section use aria-labeled by to show what is at the top of the section of what is this section known by
