@@ -17,3 +17,10 @@
 8. Accessibility isn't just for compliance, it's for making web accessible for everyone.
 9. Should use role="" whenver you are using div or not sematic elements (not part of header, footer, main, button etc..), every sematic element have role inbuilt to them
 10. whenver Making a section use aria-labeled by to show what is at the top of the section of what is this section known by
+11. css/
+    ├── styles.css
+    ├── normalize.css
+    ├── components/
+    └── utils/
+    This structure lets us separate our concerns and makes the structure easy to understand for other developers
+12. Different Browsers displays HTML differently so you need to first reset the css first before applying styling to make sure that website looks same on each and every browser.

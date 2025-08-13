@@ -1,0 +1,41 @@
+/* 
+==================================================
+PROFESSIONAL PORTFOLIO STYLESHEET
+==================================================
+Author: Rushiraj Gadhavi
+Date Created: 10 Aug, 2025
+Last Updated: 13 Aug, 2025
+Purpose: Main stylesheet for Personal Portfolio website
+
+Table of content
+1. CSS reset & Default styles
+==================================================
+*/
+
+/* 
+==================================================
+1. CSS RESET & DEFAULT STYLES
+==================================================
+Purpose: Create consistant Base styles across all browser
+Why: Different Browsers have different default styles
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base HTML style */
+html {
+  font-size: 16px; /*This will set the base font-size, othersizes will be calculated as this as base*/
+  line-height: 1.6; /*1.6 means 1.6 times the font size ,When anykind of measurement is not given it means ratio*/
+  scroll-behavior: smooth;
+}
+
+/* Body HtML styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333;
+  background-color: #ffffff;
+  overflow-x: hidden; /*overflow x targets horizontal scroll, hidden means it will hide the horizontal scollbar and clip the elements*/
+}
