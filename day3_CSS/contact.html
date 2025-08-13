@@ -23,68 +23,158 @@
     </header>
     <main>
       <article>
-        <h2>Contact me!</h2>
-        <form action="#" method="post">
-          <div>
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
+        <h2>Get in touch!</h2>
+        <p>
+          Ready to start Your Next Project? Fill the form below and I wil get
+          back to you!
+        </p>
+        <form action="https://formspree.io/f/mwpqyzvw" method="post">
+          <fieldset>
+            <legend>Contact information</legend>
+            <div class="form-group">
+              <label for="name"
+                >Full Name
+                <span class="required" aria-label="required">*</span></label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                required
+                aria-describedby="name-help name-error"
+              />
+              <small id="name-help">Enter your first name and last name</small>
+              <div
+                id="name-error"
+                class="error-message"
+                role="alert"
+                aria-live="polite"
+              ></div>
+            </div>
 
-          <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
+            <div class="form-group">
+              <label for="email"
+                >Email<span class="required" aria-label="required"
+                  >*</span
+                ></label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+                aria-describedby="email-help email-error"
+              />
+              <small id="email-help"
+                >We will never share your email with anyone.</small
+              >
+              <div
+                id="email-error"
+                class="error-message"
+                role="alert"
+                aria-live="polite"
+              ></div>
+            </div>
 
-          <div>
-            <label for="company">Company/Organization</label>
-            <input type="text" id="company" name="company" />
-          </div>
+            <div class="form-group">
+              <label for="company">Company/Organization</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                aria-describedby="company-help"
+              />
+              <small id="company-help"
+                >Enter the name of your company if any</small
+              >
+            </div>
+          </fieldset>
 
-          <div>
-            <label for="project-type">Project Type</label>
-            <select id="project-type" name="project-type">
-              <option value="">Select one...</option>
-              <option value="website">New website</option>
-              <option value="redesign">Website redesign</option>
-              <option value="maintenance">Maintenance</option>
-              <option value="consultation">Consultation</option>
-            </select>
-          </div>
+          <fieldset>
+            <legend>Project Information</legend>
+            <div class="form-group">
+              <label for="project-type">Project Type</label>
+              <select
+                id="project-type"
+                name="project-type"
+                aria-describedby="project-help"
+              >
+                <option value="">Select one...</option>
+                <option value="website">New website</option>
+                <option value="redesign">Website redesign</option>
+                <option value="maintenance">Maintenance</option>
+                <option value="consultation">Consultation</option>
+              </select>
+              <small id="project-help"
+                >Select what kind of service you want</small
+              >
+            </div>
 
-          <div>
-            <label for="budget">Select your budget</label>
-            <select id="budget" name="budget">
-              <option value="">Select one...</option>
-              <option value="5k">upto 5k</option>
-              <option value="5k-10k">5000 - 10000</option>
-              <option value="10k-20k">10000 - 20000</option>
-              <option value="20k">More than 20k</option>
-            </select>
-          </div>
+            <div class="form-group">
+              <label for="budget">Select your budget</label>
+              <select id="budget" name="budget" aria-describedby="budget-help">
+                <option value="">Select one...</option>
+                <option value="5k">upto 5k</option>
+                <option value="5k-10k">5000 - 10000</option>
+                <option value="10k-20k">10000 - 20000</option>
+                <option value="20k">More than 20k</option>
+              </select>
+              <small id="budget-help"
+                >What is the budget you are expecting</small
+              >
+            </div>
 
-          <div>
-            <label for="timelimit">Timeconstraint</label>
-            <select id="timelimit" name="timelimit">
-              <option value="">Select one...</option>
-              <option value="1">Under 1Month</option>
-              <option value="1-2">in 1 to 2Months</option>
-              <option value="2-3">in 2 to 3Months</option>
-              <option value="4">More than 3Months</option>
-            </select>
-          </div>
+            <div class="form-group">
+              <label for="timelimit">Timeconstraint</label>
+              <select
+                id="timelimit"
+                name="timelimit"
+                aria-describedby="timelimit-help"
+              >
+                <option value="">Select one...</option>
+                <option value="1">Under 1Month</option>
+                <option value="1-2">in 1 to 2Months</option>
+                <option value="2-3">in 2 to 3Months</option>
+                <option value="4">More than 3Months</option>
+              </select>
+              <small id="timelimit-help"
+                >What range describes your need for project completion
+                best</small
+              >
+            </div>
+          </fieldset>
 
-          <div>
+          <div class="form-group">
             <label for="project-details">Project Details</label>
             <textarea
               id="project-details"
               name="project-details"
               rows="5"
               required
-              placeholder="Tell me about your project and requirements"
+              placeholder="Tell me about your project and requirements, your target audience etc..."
             ></textarea>
           </div>
 
-          <div>
+          <div class="form-group">
+            <input
+              type="checkbox"
+              value="yes"
+              id="privacy-consent"
+              name="privacy-consent"
+              required
+            />
+            <label for="privacy-consent"
+              >I agree to
+              <a href="privacy-policy.html" target="_blank">Privacy Policy</a>,
+              and concent to storing my information<span class="required"
+                >*</span
+              ></label
+            >
+          </div>
+
+          <div class="form-group">
             <input
               type="checkbox"
               id="newsletter"
@@ -97,9 +187,12 @@
             >
           </div>
 
-          <div>
-            <button type="submit">Send Message</button>
-            <button type="reset">Clear Form</button>
+          <div class="form-actions">
+            <button type="submit" class="button-primary">
+              <span>Send Message</span>
+              <span class="loding" aria-hidden="true">Sending...</span>
+            </button>
+            <button type="reset" class="button-secondary">Clear Form</button>
           </div>
         </form>
       </article>
