@@ -9,6 +9,11 @@ Purpose: Main stylesheet for Personal Portfolio website
 
 Table of content
 1. CSS reset & Default styles
+2. Typography System
+3. Color system
+4. Layout foundation
+5. Header and Navigation
+6. Accessibility enhancement
 ==================================================
 */
 
@@ -35,7 +40,265 @@ html {
 /* Body HtML styles */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #333333;
-  background-color: #ffffff;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
   overflow-x: hidden; /*overflow x targets horizontal scroll, hidden means it will hide the horizontal scollbar and clip the elements*/
+}
+
+/* 
+==================================================
+2. TYPOGRAPHY SYSTEM
+==================================================
+Purpose: Consistant typography across the entire site
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem; /*rem = 1 times the size of root font size*/
+  color: var(--text-primary);
+}
+
+/* Styling headers on modular scale */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+/* paragraph and body text */
+p {
+  font-size: 1.25rem;
+  max-width: 65ch;
+}
+
+/* Styling links */
+
+a {
+  color: var(--primary-500);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-700);
+  text-decoration: none;
+}
+
+a:focus {
+  color: var(--primary-700);
+  outline: solid 2px #222222;
+  outline-offset: 2px;
+}
+
+/* 
+==================================================
+3. Color System
+==================================================
+Purpose: Create consistanct color pallet and system to use accross the website
+approach: creating custome varaibles to create once, use everywhere
+
+*/
+
+/* declaring varibles in root so it can be accessed in any element */
+:root {
+  /* primary colors */
+  --primary-50: #eff6ff;
+  --primary-500: #3b82f6;
+  --primary-600: #2563eb;
+  --primary-700: #1d4ed8;
+  --primary-900: #1e3a8a;
+
+  /* neutral colors */
+  --neutral-50: #f9fafb;
+  --neutral-100: #f3f4f6;
+  --neutral-200: #e5e7eb;
+  --neutral-300: #d1d5db;
+  --neutral-500: #6b7280;
+  --neutral-700: #374151;
+  --neutral-800: #1f2937;
+  --neutral-900: #111827;
+
+  /* sematic action colors */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+
+  /* Text Colors */
+  --text-primary: var(--neutral-900);
+  --text-secondary: var(--neutral-700);
+  --text-muted: var(--neutral-500);
+
+  /* Background Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: var(--neutral-50);
+  --bg-accent: var(--primary-50);
+}
+
+/* 
+==================================================
+4. LAYOUT FOUNDATION
+==================================================
+Purpose: To create consistant styling and layout
+*/
+
+/* Main page grid layout */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  min-height: 100vh;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* container system for easiey and consistant layout of elements */
+
+/* for containers with multiple columns */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+/* Narrow container for readable text content */
+.container-narrow {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* 
+==================================================
+5. HEADER AND NAVIGATION
+==================================================
+Purpose: Site branding and Primary navigation
+*/
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--neutral-200);
+  z-index: 100;
+}
+
+header .container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--neutral-700);
+}
+
+header .tagline {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* navigationl list reset */
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+nav a:hover {
+  background-color: var(--primary-50);
+  color: var(--primary-700);
+}
+
+nav a:focus {
+  outline: 2px solid var(--primary-600);
+  outline-offset: 2px;
+}
+
+/* Active page indicator */
+nav a[aria-current="page"] {
+  background-color: var(--primary-100);
+  color: var(--primary-700);
+  font-weight: 600;
+}
+
+/*
+==================================================
+6. ACCESSIBILITY ENHANCEMENTS
+==================================================
+Purpose: Ensure website is usable by everyone
+*/
+
+/* Skip link for keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background-color: var(--primary-600);
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+  font-weight: 600;
+  z-index: 1000;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  color: white;
+  top: 0;
+  outline: 2px solid var(--primary-900);
+  outline-offset: 2px;
 }

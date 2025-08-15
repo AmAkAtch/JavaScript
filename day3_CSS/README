@@ -24,3 +24,4 @@
     └── utils/
     This structure lets us separate our concerns and makes the structure easy to understand for other developers
 12. Different Browsers displays HTML differently so you need to first reset the css first before applying styling to make sure that website looks same on each and every browser.
+13. after setting some default styles, we need to change defaults for typography like our headings and pragraph. It will make sure that our content looks same on every browser.
